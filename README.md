@@ -36,4 +36,8 @@ A dark-themed landing page featuring:
 ---
 
 ## 📂 Project Structure
-
+Cursor-Clone/
+│
+├── index1.html # Main HTML file
+├── style1.css # CSS styling and responsiveness
+└── Cursor/ # Assets (Cursor logo)
