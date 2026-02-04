@@ -1,0 +1,236 @@
+/* ======================
+   GLOBAL RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1c1c1c, #0a0a0a 60%);
+  color: white;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 80px);
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 20px;
+  border-radius: 14px;
+
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 1000;
+}
+
+/* Left */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 18px;
+}
+
+.brand {
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+/* Center Links */
+.nav-center {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-center a:hover {
+  color: white;
+}
+
+/* Right Buttons */
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-fill {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-fill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+/* ======================
+   HERO SECTION
+====================== */
+.hero {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-title {
+  max-width: 800px;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Primary Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: black;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+}
+
+.btn-icon {
+  font-size: 16px;
+}
+
+/* ======================
+   PREVIEW SECTION
+====================== */
+.preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-bottom: 120px;
+}
+
+.preview-frame {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+/* Header */
+.preview-label {
+  padding: 14px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Layout */
+.preview-content {
+  display: flex;
+  min-height: 350px;
+}
+
+/* Sidebar */
+.preview-sidebar {
+  width: 260px;
+  background: rgba(10, 10, 10, 0.8);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Editor */
+.preview-editor {
+  flex: 1;
+  padding: 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: #dcdcdc;
+  background: #0f0f0f;
+  overflow-x: auto;
+}
+
+.preview-editor pre {
+  white-space: pre-wrap;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .preview-content {
+    flex-direction: column;
+  }
+
+  .preview-sidebar {
+    width: 100%;
+  }
+}
